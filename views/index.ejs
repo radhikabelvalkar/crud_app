@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Users</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h5>Users List</h5>
+    <h5><a href="/register">Create New User</a></h5>
+    <table>
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email</td>
+          <td>Contact</td>
+        </tr>
+      </thead>
+      <tbody>
+        <%for(let index in users){%>
+        <tr>
+          <td><%- index + 1%></td>
+          <td><%- users[index].firstName%></td>
+          <td><%- users[index].lastName%></td>
+          <td><%- users[index].email%></td>
+          <td><%- users[index].contact%></td>
+        </tr>
+        <%}%>
+      </tbody>
+    </table>
+  </body>
+</html>
